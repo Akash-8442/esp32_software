@@ -6,8 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>My data code : </h1>
-    {{data}}
+    
+    <h1>Sending data to Backend</h1>
+    <h3>
+        {{status}}
+    </h3>
+    <form action="{% url 'data_recieved' %}" method="POST">
+        {% csrf_token %}
+    
+        <!-- <input name="applianceObject" type="text" placeholder="Input the appliance"> -->
+        <input name="applianceObject" type="text" placeholder="Enter Appliance Object">
+        <!-- <input name="intenseValue" type="text" placeholder="Input the Intensity"> -->
+        <input type="number" id="slider" name="intenseValue">
+        <!-- <input type="range" id="slider" name="intenseValue" min="0" max="100"> -->
+
+
+        <input type="submit" value="Submit Now">
+    </form>
+
+
+
+
+
+
+
+    
     
 </body>
 </html>

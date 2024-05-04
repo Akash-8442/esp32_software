@@ -26,12 +26,15 @@ SECRET_KEY = 'django-insecure-y5d8#(30gaxw*$qyax)ne_+4idcm53ph9#$nv^1eia-a1g(xr3
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+APPEND_SLASH = False
 
-ALLOWED_HOSTS = ['*', '192.168.37.180:8000','127.0.0.1:8000']
 
+ALLOWED_HOSTS = ['*', '192.168.37.180:8000','127.0.0.1:8000','192.168.37.180','192.168.37.217']
+# ALLOWEED_HOSTS = ['*',' 192.168.42.180:8000','192.168.42.180','192.168.42.180:8000']
 
 CORS_ALLOWED_ORIGINS = [
     'http://192.168.37.180:8000',
+    'http://192.168.42.180:8000',
 ]
 
 CORS_ALLOW_METHODS = [
